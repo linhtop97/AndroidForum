@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="AndroidForum.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Android Forum</title>
+    <link href="style/MasterPage.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="formmain" runat="server">
+        <div id="main-container">
+            <!--box wrap site-->
+            <div id="wrap-site">
+                <!--Header-->
+                <header>
+                    <div id="header-main">
+                        <div id="header-left">
+                            <p class="logo-title">Android Forum </p>
+                            <div class="line-vertical search-box">
+                                <asp:TextBox ID="search" runat="server" placeholder="Tìm kiếm"></asp:TextBox>
+                            </div>  
+                        </div>
+                        <div id="header-right-login">
+                            <asp:Button ID="login" class="button btn-login" Text="Đăng nhập" runat="server" />
+                            <asp:Button ID="register" class="button btn-register" Text="Đăng ký" runat="server" />
+                        </div>
+                        <div id="header-right-nav"></div>
+                    </div>
+
+                </header>
+                <!--Content-->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderPage" runat="server">
+                </asp:ContentPlaceHolder>
+                <footer>
+                    <div class="footer-main">
+                    </div>
+                </footer>
+                <!--Footer-->
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
